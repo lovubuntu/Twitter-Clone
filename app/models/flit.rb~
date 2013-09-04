@@ -1,0 +1,3 @@
+class Flit < ActiveRecord::Base
+  attr_accessible :created_at, :message, :user_id
+end
