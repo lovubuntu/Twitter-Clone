@@ -10,7 +10,7 @@ gem 'bcrypt-ruby', :require=>'bcrypt'
 gem 'nifty-generators'
 gem 'faker'
 gem 'populator'
-
+gem 'gravtastic'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

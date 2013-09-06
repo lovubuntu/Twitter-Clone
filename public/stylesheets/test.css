@@ -1,16 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
 body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
@@ -29,37 +16,6 @@ a {
   clear: both;
   height: 0;
   overflow: hidden;
-}
-
-?* Flits List display */
-#flits_list {
-  margin: 0px;
-  padding: 0px;
-}
-
-#flits_list li {
-  padding:10px;
-  list-style:none;
-  margin:0px;
-  background-color:#FFF;
-  border-bottom: 1px solid #D2DADA;  
-}
-
-#flits_list li.first{
-  border-top: 1px solid #D2DADA;
-}
-
-#flits_list li:hover {
-  background-color:#F7F7F7;
-}
-
-#flits_list li img{
-  float:left;
-}
-
-#flits_list li div.flit_message_container{
-  float:left;
-  padding-left:10px;
 }
 
 #container {

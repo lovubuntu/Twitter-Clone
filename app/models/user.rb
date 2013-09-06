@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
   has_many :friendships
   has_many :friends, :through => :friendships
 
+# Including the Gravatar
+  include Gravtastic
+  gravtastic :size => 50
+
   #add friends
   def add_friend(friend)
     friendship = friendships.build(:friend_id => friend.id)
@@ -24,6 +28,10 @@ class User < ActiveRecord::Base
       logger.debug "save unsuccessful for #{friend.email}"
     end
   end
+
+def all_flits
+  Flit.find(:all, :conditions => ["user_id in (?)",friends.map(&:id).push(self.id)], :order => "created_at desc" )
+end
 
   # login can be either username or email address
   def self.authenticate(login, pass)
